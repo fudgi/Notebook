@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+html, body{
+     height: 100%;
+}
+
+body {   
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+header, footer {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+header p {
+    margin: 0;
+    padding: 0;
+}
+header a {
+    color: #0093ff;
+}
+.main-frame {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    background-color: white;
+}
+
+.list-frame {
+    font-size: 14px;
+    min-width: 250px;
+    padding: 37px 10px 20px 10px;
+    display: flex;
+    flex-flow: column;
+    min-width: 250px;
+    border-right: 2px solid black;
+}
+#search-block {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+#search {
+    flex-grow: 1;
+}
+#search-button{    
+    flex-basis: 20px;
+}
+.search-not-started {
+    background-image: url(img/btn_search_up_BIDI.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.search-started {
+    background-image: url(img/close_x.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.marker, .edit-button, .remove-button {
+    margin: 0 2px;
+    align-self: center;
+    padding: 0 5px;
+    height: 14px;
+    cursor: pointer;
+}
+.edit-button:hover, .remove-button:hover {
+    background-color: #3faeff;
+    border: 1px solid #3faeff;
+    border-radius: 4px;
+}
+.marker {
+    visibility: hidden;
+}
+#selected-note .marker {
+    visibility: visible
+}
+#selected-note {
+    background-color: #89cdff;
+}
+#hidden-note {
+    display: none;
+}
+.note-list {
+    overflow: hidden;
+    flex-grow: 1;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.note-list div {
+    padding: 2px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.note-list .lf-note-name {
+    flex-grow: 1;
+    padding: 0 5px;
+}
+.note-list div:nth-child(2n-1) {
+    background-color: gainsboro;
+}
+.note-list div:nth-child(2n) {
+    background-color: #f7f7f7;
+}
+
+
+.work-frame {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    flex-grow: 1;    
+    font-family: 'Times New Roman', serif;
+}
+.wf-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+}
+.wf-text {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+
+.edit-mode {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+textarea.wf-text {
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+    resize: none;
+    overflow: hidden;
+}
+textarea.wf-text:hover {
+    overflow: scroll;
+}
+textarea.wf-name {
+    height: 1.5em;
+    font-weight: bold;
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
+    resize: none;
+    width: 200px;
+}
+
+div[data-id=27] span{
+  color:red;
+}
+
+.edit-mode {margin-top: 10px;}
+#save-button {margin-left: 10px;}
